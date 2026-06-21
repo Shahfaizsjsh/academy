@@ -1,0 +1,307 @@
+ <!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shah Academy</title><style>
+:root{
+--primary:#c1121f;
+--dark:#1f2937;
+--light:#ffffff;
+--gray:#f8f9fa;
+--border:#e5e7eb;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:var(--light);
+color:var(--dark);
+line-height:1.6;
+}
+
+header{
+position:sticky;
+top:0;
+background:white;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:var(--primary);
+}
+
+nav a{
+text-decoration:none;
+color:var(--dark);
+margin-left:25px;
+font-weight:600;
+}
+
+nav a:hover{
+color:var(--primary);
+}
+
+.banner{
+height:500px;
+background:#ececec;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
+}
+
+.banner-text{
+font-size:24px;
+color:#666;
+}
+
+.circle-logo{
+width:160px;
+height:160px;
+background:white;
+border-radius:50%;
+border:6px solid var(--primary);
+display:flex;
+align-items:center;
+justify-content:center;
+margin:auto;
+margin-top:-80px;
+position:relative;
+font-weight:bold;
+color:var(--primary);
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+.hero{
+text-align:center;
+padding:40px 20px;
+}
+
+.hero h1{
+font-size:48px;
+color:var(--primary);
+margin-bottom:10px;
+}
+
+.tagline{
+font-size:20px;
+color:#666;
+}
+
+section{
+padding:80px 10%;
+}
+
+.section-title{
+text-align:center;
+font-size:36px;
+color:var(--primary);
+margin-bottom:50px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+border:1px solid var(--border);
+box-shadow:0 3px 10px rgba(0,0,0,.05);
+}
+
+.achievement{
+display:flex;
+gap:25px;
+align-items:center;
+margin-bottom:40px;
+padding:25px;
+background:white;
+border-radius:15px;
+border:1px solid var(--border);
+}
+
+.image-placeholder{
+width:220px;
+height:160px;
+background:#ececec;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:10px;
+color:#777;
+flex-shrink:0;
+}
+
+.about-box,
+.social-box,
+.contact-box{
+background:white;
+padding:25px;
+border-radius:15px;
+border:1px solid var(--border);
+}
+
+.admission{
+text-align:center;
+background:var(--primary);
+color:white;
+padding:80px 20px;
+}
+
+.admission h2{
+font-size:40px;
+margin-bottom:20px;
+}
+
+.btn{
+display:inline-block;
+background:white;
+color:var(--primary);
+padding:14px 28px;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+}
+
+footer{
+background:#111827;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+@media(max-width:768px){
+header{
+flex-direction:column;
+gap:10px;
+}
+
+nav a{
+margin:0 8px;
+}
+
+.hero h1{
+font-size:36px;
+}
+
+.achievement{
+flex-direction:column;
+text-align:center;
+}
+
+.image-placeholder{
+width:100%;
+}
+}
+</style></head><body><header>
+<div class="logo">SHAH ACADEMY</div><nav>
+<a href="#courses">Courses</a>
+<a href="#student">Student Achievements</a>
+<a href="#academy">Academy Achievements</a>
+<a href="#professor">Professor</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+</header><div class="banner">
+<img src="images/banner.jpeg"
+alt="shah academy banner"
+style="width:100%; height :100%;
+object-fit:cover;">
+</div><div class="circle-logo">
+<img src="images/logo shah academy.png"
+alt="shah academy logo"
+style="width:120px; height:120px;
+border-radius: 50%;">
+</div>
+<div class="hero">
+<h1>SHAH ACADEMY</h1>
+<p class="tagline">[FROM BASIC TO BRILLIANT]</p>
+</div><section id="courses">
+<h2 class="section-title">Our courses</h2><div class="cards"><div class="card">
+<h3>[1st to 8th group tutions]</h3>
+<p>[WE PROVIDE QUALITY GROUP TUTIONS TO STUDENTS WHERE EACH SBUJECTS EACH TOPIC IS EXPLAINED THROUGHLY BY PROFFESIONAL TEACHERS]</p>
+</div><div class="card">
+<h3>[Course Name]</h3>
+<p>[Course Description]</p>
+</div><div class="card">
+<h3>[Course Name]</h3>
+<p>[Course Description]</p>
+</div></div>
+</section><section id="student">
+<h2 class="section-title">Student Achievements</h2><div class="achievement">
+<div class="image-placeholder">Student Image</div><div>
+<h3>[Student Name]</h3>
+<p>[Achievement Title]</p>
+<p>[Achievement Description]</p>
+</div>
+</div><div class="achievement">
+<div class="image-placeholder">Student Image</div><div>
+<h3>[Student Name]</h3>
+<p>[Achievement Title]</p>
+<p>[Achievement Description]</p>
+</div>
+</div></section><section id="academy">
+<h2 class="section-title">Academy Achievements</h2><div class="achievement">
+<div class="image-placeholder">Achievement Image</div><div>
+<h3>[Achievement Title]</h3>
+<p>[Achievement Information]</p>
+</div>
+</div>
+</section><section id="professor">
+<h2 class="section-title">Professor's Achievements</h2><div class="achievement">
+<div class="image-placeholder">Professor Image</div><div>
+<h3>[Professor Name]</h3>
+<p>[Qualification]</p>
+<p>[Experience]</p>
+<p>[Achievements]</p>
+</div>
+</div>
+</section><section id="about">
+<h2 class="section-title">About Us</h2><div class="about-box">
+<p>[WRITE ABOUT SHAH ACADEMY HERE]</p>
+</div>
+</section><section>
+<h2 class="section-title">Social & Location</h2><div class="social-box">
+<p>Instagram: [Instagram Link]</p>
+<p>WhatsApp: [WhatsApp Number]</p>
+<p>Google Maps: [Map Link]</p>
+<p>Email: [Email]</p>
+<p>Address: [Address]</p>
+</div>
+</section><section id="contact">
+<h2 class="section-title">Contact Us</h2><div class="contact-box">
+<p>Name: ____________________</p>
+<p>Phone: ____________________</p>
+<p>Message: ____________________</p>
+</div>
+</section><section class="admission">
+<h2>Admissions Open</h2>
+<p>Ready to join Shah Academy?</p>
+<br><a class="btn"
+href="https://wa.me/91XXXXXXXXXX?text=Hello%20Shah%20Academy,%20I%20am%20interested%20in%20admission."
+target="_blank">
+Apply on WhatsApp
+</a>
+
+</section><footer>
+© Shah Academy | All Rights Reserved
+</footer></body>
+</html>

@@ -1,307 +1,290 @@
- <!DOCTYPE html><html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shah Academy</title><style>
+<title>Shah Academy</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"><style>
 :root{
 --primary:#c1121f;
---dark:#1f2937;
---light:#ffffff;
---gray:#f8f9fa;
---border:#e5e7eb;
+--dark:#111827;
+--gray:#f3f4f6;
+--card:#ffffff;
 }
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, sans-serif;
+font-family:'Poppins',sans-serif;
 scroll-behavior:smooth;
 }
 
 body{
-background:var(--light);
+background:#fff;
 color:var(--dark);
-line-height:1.6;
 }
 
+/* HEADER */
 header{
 position:sticky;
 top:0;
-background:white;
-padding:18px 8%;
+background:#fff;
 display:flex;
 justify-content:space-between;
 align-items:center;
-box-shadow:0 2px 10px rgba(0,0,0,.08);
+padding:12px 8%;
+box-shadow:0 2px 15px rgba(0,0,0,0.08);
 z-index:1000;
 }
 
 .logo{
-font-size:28px;
+font-size:20px;
 font-weight:700;
 color:var(--primary);
+letter-spacing:1px;
 }
 
 nav a{
+margin:0 12px;
 text-decoration:none;
 color:var(--dark);
-margin-left:25px;
-font-weight:600;
+font-weight:500;
 }
 
 nav a:hover{
 color:var(--primary);
 }
 
+.admission-btn{
+background:var(--primary);
+color:#fff;
+padding:10px 18px;
+border-radius:25px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+.admission-btn:hover{
+transform:scale(1.05);
+}
+
+/* BANNER */
 .banner{
-height:500px;
-background:#ececec;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
+height:260px;
 position:relative;
+overflow:hidden;
+}
+
+.banner img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:hidden;
+}
+
+.banner::after{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.45);
 }
 
 .banner-text{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+color:#fff;
+text-align:center;
+z-index:2;
+}
+
+.banner-text h1{
 font-size:24px;
-color:#666;
 }
 
-.circle-logo{
-width:160px;
-height:160px;
-background:white;
-border-radius:50%;
-border:6px solid var(--primary);
-display:flex;
-align-items:center;
-justify-content:center;
-margin:auto;
-margin-top:-80px;
-position:relative;
-font-weight:bold;
-color:var(--primary);
-box-shadow:0 5px 20px rgba(0,0,0,.1);
+.banner-text p{
+margin-top:13px;
 }
-
-.hero{
-text-align:center;
-padding:40px 20px;
-}
-
-.hero h1{
-font-size:48px;
-color:var(--primary);
-margin-bottom:10px;
-}
-
-.tagline{
-font-size:20px;
-color:#666;
-}
-
 section{
-padding:80px 10%;
+scroll-margin-top:80px;
+}
+.cards{
+transition:0.3s ease;
+}
+.card:hover{
+transform: translateY(-6px);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+/* LOGO */
+
+
+.logo-circle img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+.logo-circle{
+width:120px;
+height:120px;
+border-radius:50%;
+overflow:hidden;
+margin:-60px auto 20px auto;
+border:4px solid white;
+box-shadow:0 5px 20px rgba(0,0,0,0.25);
+}
+/* SECTIONS */
+section{
+padding:70px 10%;
 }
 
-.section-title{
+.title{
 text-align:center;
-font-size:36px;
+font-size:32px;
+margin-bottom:40px;
 color:var(--primary);
-margin-bottom:50px;
 }
 
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+gap:20px;
 }
 
 .card{
-background:white;
-padding:25px;
+background:var(--card);
+padding:20px;
 border-radius:15px;
-border:1px solid var(--border);
-box-shadow:0 3px 10px rgba(0,0,0,.05);
+box-shadow:0 4px 15px rgba(0,0,0,0.08);
+transition:0.3s;
 }
 
+.card:hover{
+transform:translateY(-5px);
+}
+
+/* ACHIEVEMENTS */
 .achievement{
 display:flex;
-gap:25px;
+gap:20px;
 align-items:center;
-margin-bottom:40px;
-padding:25px;
-background:white;
-border-radius:15px;
-border:1px solid var(--border);
+margin-bottom:25px;
+background:#fff;
+padding:15px;
+border-radius:12px;
+box-shadow:0 3px 12px rgba(0,0,0,0.08);
 }
 
-.image-placeholder{
-width:220px;
-height:160px;
-background:#ececec;
-display:flex;
-align-items:center;
-justify-content:center;
+.achievement img{
+width:200px;
+height:140px;
+object-fit:cover;
 border-radius:10px;
-color:#777;
-flex-shrink:0;
 }
 
-.about-box,
-.social-box,
+/* ABOUT */
+.about{
+background:var(--gray);
+padding:40px;
+border-radius:15px;
+text-align:center;
+}
+
+/* CONTACT */
 .contact-box{
-background:white;
+background:#fff;
 padding:25px;
 border-radius:15px;
-border:1px solid var(--border);
-}
-
-.admission{
+box-shadow:0 3px 12px rgba(0,0,0,0.08);
 text-align:center;
-background:var(--primary);
-color:white;
-padding:80px 20px;
 }
 
-.admission h2{
-font-size:40px;
-margin-bottom:20px;
-}
-
-.btn{
-display:inline-block;
-background:white;
-color:var(--primary);
-padding:14px 28px;
-text-decoration:none;
-border-radius:30px;
-font-weight:bold;
-}
-
+/* FOOTER */
 footer{
-background:#111827;
-color:white;
+background:var(--dark);
+color:#fff;
 text-align:center;
-padding:25px;
+padding:20px;
+margin-top:40px;
 }
 
+/* MOBILE */
 @media(max-width:768px){
 header{
-flex-direction:column;
+padding:12px;
+flex-direction: column;
 gap:10px;
+text-align: center;
+} 
+nav{
+display:flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 10px;
 }
-
 nav a{
-margin:0 8px;
+margin: 5px;
+font-size: 14px;
 }
-
-.hero h1{
-font-size:36px;
+.cards{
+grid-template-columns: 1fr;
 }
-
 .achievement{
 flex-direction:column;
 text-align:center;
 }
-
-.image-placeholder{
-width:100%;
+.logo{
+font-size:20px;
 }
 }
 </style></head><body><header>
 <div class="logo">SHAH ACADEMY</div><nav>
 <a href="#courses">Courses</a>
-<a href="#student">Student Achievements</a>
-<a href="#academy">Academy Achievements</a>
-<a href="#professor">Professor</a>
+<a href="#achievements">Achievements</a>
 <a href="#about">About</a>
 <a href="#contact">Contact</a>
-</nav>
-</header><div class="banner">
-<img src="images/banner.jpeg"
-alt="shah academy banner"
-style="width:100%; height :100%;
-object-fit:cover;">
-</div><div class="circle-logo">
-<img src="images/logo shah academy.png"
-alt="shah academy logo"
-style="width:120px; height:120px;
-border-radius: 50%;">
-</div>
-<div class="hero">
-<h1>SHAH ACADEMY</h1>
-<p class="tagline">[FROM BASIC TO BRILLIANT]</p>
-</div><section id="courses">
-<h2 class="section-title">Our courses</h2><div class="cards"><div class="card">
-<h3>[1st to 8th group tutions]</h3>
-<p>[WE PROVIDE QUALITY GROUP TUTIONS TO STUDENTS WHERE EACH SBUJECTS EACH TOPIC IS EXPLAINED THROUGHLY BY PROFFESIONAL TEACHERS]</p>
-</div><div class="card">
-<h3>[Course Name]</h3>
-<p>[Course Description]</p>
-</div><div class="card">
-<h3>[Course Name]</h3>
-<p>[Course Description]</p>
-</div></div>
-</section><section id="student">
-<h2 class="section-title">Student Achievements</h2><div class="achievement">
-<div class="image-placeholder">Student Image</div><div>
-<h3>[Student Name]</h3>
-<p>[Achievement Title]</p>
-<p>[Achievement Description]</p>
-</div>
-</div><div class="achievement">
-<div class="image-placeholder">Student Image</div><div>
-<h3>[Student Name]</h3>
-<p>[Achievement Title]</p>
-<p>[Achievement Description]</p>
-</div>
-</div></section><section id="academy">
-<h2 class="section-title">Academy Achievements</h2><div class="achievement">
-<div class="image-placeholder">Achievement Image</div><div>
-<h3>[Achievement Title]</h3>
-<p>[Achievement Information]</p>
-</div>
-</div>
-</section><section id="professor">
-<h2 class="section-title">Professor's Achievements</h2><div class="achievement">
-<div class="image-placeholder">Professor Image</div><div>
-<h3>[Professor Name]</h3>
-<p>[Qualification]</p>
-<p>[Experience]</p>
-<p>[Achievements]</p>
-</div>
-</div>
-</section><section id="about">
-<h2 class="section-title">About Us</h2><div class="about-box">
-<p>[WRITE ABOUT SHAH ACADEMY HERE]</p>
-</div>
-</section><section>
-<h2 class="section-title">Social & Location</h2><div class="social-box">
-<p>Instagram: [Instagram Link]</p>
-<p>WhatsApp: [WhatsApp Number]</p>
-<p>Google Maps: [Map Link]</p>
-<p>Email: [Email]</p>
-<p>Address: [Address]</p>
-</div>
-</section><section id="contact">
-<h2 class="section-title">Contact Us</h2><div class="contact-box">
-<p>Name: ____________________</p>
-<p>Phone: ____________________</p>
-<p>Message: ____________________</p>
-</div>
-</section><section class="admission">
-<h2>Admissions Open</h2>
-<p>Ready to join Shah Academy?</p>
-<br><a class="btn"
-href="https://wa.me/91XXXXXXXXXX?text=Hello%20Shah%20Academy,%20I%20am%20interested%20in%20admission."
-target="_blank">
-Apply on WhatsApp
+</nav><a class="admission-btn"
+href="https://wa.me/91XXXXXXXXXX?text=I%20want%20admission%20in%20Shah%20Academy">
+Admissions Open
 </a>
 
+</header><!-- BANNER --><div class="banner">
+<img src="images/banner.jpeg">
+<div class="banner-text">
+<h1>Shah Academy</h1>
+<p>Build your future with us</p>
+</div>
+</div><!-- LOGO --><div class="logo-circle">
+<img src="images/logo shah academy.png">
+</div><!-- COURSES --><section id="courses">
+<h2 class="title">Our Courses</h2><div class="cards">
+<div class="card">[Course Name]</div>
+<div class="card">[Course Name]</div>
+<div class="card">[Course Name]</div>
+</div>
+</section><!-- ACHIEVEMENTS --><section id="achievements">
+<h2 class="title">Achievements</h2><div class="achievement">
+<img src="images/banner.jpeg">
+<div>
+<h3>[Title]</h3>
+<p>[Description]</p>
+</div>
+</div></section><!-- ABOUT --><section id="about">
+<h2 class="title">About Us</h2>
+<div class="about">
+<p>[Write about Shah Academy here]</p>
+</div>
+</section><!-- CONTACT --><section id="contact">
+<h2 class="title">Contact</h2>
+<div class="contact-box">
+<p>Email: mominfaiz0852@gmail.com</p>
+<p>Instagram: rry._.faiz</p>
+<p>Address: Nagpada</p>
+</div>
 </section><footer>
-© Shah Academy | All Rights Reserved
+© 2026 Shah Academy | All Rights Reserved
 </footer></body>
 </html>

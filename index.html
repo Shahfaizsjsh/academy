@@ -121,14 +121,17 @@ margin-top:10px;
 
 /* LOGO */
 .logo-circle{
-width:120px;
-height:120px;
+width:130px;
+height:130px;
 border-radius:50%;
 overflow:hidden;
-margin:-60px auto 20px auto;
-border:4px solid #fff;
-box-shadow:0 5px 20px rgba(0,0,0,0.25);
+border:5px solid #fff;
+box-shadow:0 8px 25px rgba(0,0,0,0.25);
+
+position:relative;
+margin:-65px auto 20px auto; /* THIS creates overlap */
 background:#fff;
+z-index:10;
 }
 
 .logo-circle img{
